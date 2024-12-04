@@ -1,0 +1,139 @@
+:root {
+    --primary-bg: #f3dbaf;
+    --secondary-bg: #636f2c;
+    --accent-color: #2b2018e9;
+    --transition-duration: 0.8s;
+}
+
+.contate-nos h1 {
+    font-family: "League Spartan", sans-serif;
+    padding: 5px;
+    font-size: 70px;
+    color: #2b231b;
+    text-align: center;
+    margin-top: 170px;
+    overflow-x: auto;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: color var(--transition-duration) ease;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid var(--secondary-bg);
+    background-color: #dcc59c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #2b231b;
+}
+
+.container h2, .container p, .submit {
+    text-align: center;
+    width: 100%;
+    margin-bottom: -9px;
+    font-family: "League Spartan", sans-serif;
+}
+
+.form-contatos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    align-items: flex-start;
+}
+
+label {
+    margin-bottom: 8px;
+    color: var(--secondary-bg);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.estamos-aqui {
+    font-size: 28px;
+    margin: 8px;
+}
+
+.texto {
+    font-size: 19px;
+    margin: -16px 0px 0px 0px;
+}
+
+.input-contatos[type="text"],
+.input-contatos[type="email"],
+textarea {
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fafafab8;
+    transition: border-color var(--transition-duration) ease-in-out, box-shadow var(--transition-duration) ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input-contatos[type="text"]:focus,
+.input-contatos[type="email"]:focus,
+textarea:focus {
+    border-color: var(--secondary-bg);
+    outline: none;
+    box-shadow: 0 0 8px var(--secondary-bg);
+}
+
+textarea {
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fafafab8;
+    transition: border-color var(--transition-duration) ease-in-out, box-shadow var(--transition-duration) ease;
+    resize: none;
+    min-height: 120px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.button-enviar {
+    padding: 12px 30px;
+    background-color: var(--secondary-bg);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color var(--transition-duration) ease, transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
+}
+
+.submit .button-enviar:hover {
+    background-color: var(--accent-color);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    margin-top: auto;
+}

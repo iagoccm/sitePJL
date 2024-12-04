@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EarthWise Agriculture</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contatos.css">
+
+    <link rel="icon" href="img/logo-do-site.png" type="image/png">
+
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <span class="logo">EarthWise Agriculture</span>
+            <!-- <div class="mobile-menu">☰</div> -->
+            <div class="nav-links">
+                <a href="obterselo.html">Selo</a>
+                <a href="empresas.html">Empresas</a>
+                <a href="doar.html">Doar</a>
+                <a href="contatos.html">Contatos</a>
+            </div>
+        </nav>
+    </header>
+
+    <button id="menu-btn" class="menu-btn">☰</button>
+
+    <div id="sidebar" class="sidebar">
+        <button id="close-btn" class="close-btn">×</button>
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="obterselo.html">Selo</a></li>
+            <li><a href="empresas.html">Empresas</a></li>
+            <li><a href="doar.html">Doar</a></li>
+            <li><a href="contatos.html">Contatos</a></li>
+        </ul>
+    </div>
+
+    <div class="contate-nos">
+        <h1>Contate-nos</h1>
+
+        <div class="container">
+            <h2 class="estamos-aqui">Estamos aqui para ajudar</h2>
+            <p class="texto">Se você tiver alguma dúvida ou sugestão, entre em contato conosco preenchendo o formulário abaixo, ou
+                mandando um e-mail, ou acessando nossas redes sociais.</p>
+
+            <form action="#" method="POST" class="form-contatos">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required class="input-contatos">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required class="input-contatos">
+
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <div class="submit">
+                    <button type="submit" class="button-enviar">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section" style="--delay: 1">
+                <h3>Sobre Nós</h3>
+                <p>Somos uma organização dedicada a transformar vidas através da agricultura sustentável e do
+                    desenvolvimento social, promovendo um futuro melhor para todos.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section" style="--delay: 2">
+                <h3>Links Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html#nossa-missao">Nossa Missão</a></li>
+                    <li><a href="index.html#nosso-selo">Nosso Selo</a></li>
+                    <li><a href="index.html#carta-compromisso">Carta de compromisso com o consumidor</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section" style="--delay: 3">
+                <h3>Contato</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <span>Rua Example, 123 - Cidade, Estado</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <span>(11) 9999-9999</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <span>contato@earthwiseagriculture.org</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-section" style="--delay: 4">
+                <h3 class="newsletter">Newsletter</h3>
+                <p>Inscreva-se para receber novidades sobre nossos projetos e ações.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); validarEmail();">
+                    <input type="email" class="newsletter-input" placeholder="Seu e-mail"
+                        aria-label="Endereço de e-mail para newsletter" id="email-input"
+                        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+                    <button type="submit" class="newsletter-button">
+                        Inscrever
+                    </button>
+                </form>
+                <p id="mensagem-sucesso" style="display: none; color: #8B9A46; margin-top: 10px;">Inscrição realizada
+                    com sucesso!</p>
+            </div>
+
+            <script>
+                function validarEmail() {
+                    var emailInput = document.getElementById("email-input");
+                    var email = emailInput.value;
+
+                    var regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+                    if (!regex.test(email)) {
+                        alert("Por favor, insira um e-mail válido.");
+                    } else {
+                        mostrarMensagemSucesso();
+                        limparCampo();
+                        removerFoco();
+                    }
+                }
+
+                function mostrarMensagemSucesso() {
+                    var mensagem = document.getElementById("mensagem-sucesso");
+                    mensagem.style.display = "block";
+
+                    setTimeout(function () {
+                        mensagem.style.display = "none";
+                    }, 3000);
+                }
+
+                function limparCampo() {
+                    var emailInput = document.getElementById("email-input");
+                    emailInput.value = "";
+                }
+
+                function removerFoco() {
+                    var emailInput = document.getElementById("email-input");
+                    emailInput.blur();
+                }
+
+                var emailInput = document.getElementById("email-input");
+                emailInput.addEventListener("focus", function () {
+                    var mensagem = document.getElementById("mensagem-sucesso");
+                    mensagem.style.display = "none";
+                });
+
+            </script>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="footer-direitos">&copy; 2024 EarthWise Agriculture. Todos os direitos reservados.</p>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+        <script src="js/script.js" defer></script>
+
+    </footer>
+</body>
+
+</html>
